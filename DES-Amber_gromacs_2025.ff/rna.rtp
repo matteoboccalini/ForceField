@@ -1,0 +1,1867 @@
+[ bondedtypes ]
+; Col 1: Type of bond
+; Col 2: Type of angles
+; Col 3: Type of proper dihedrals
+; Col 4: Type of improper dihedrals
+; Col 5: Generate all dihedrals if 1, only heavy atoms of 0.
+; Col 6: Number of excluded neighbors for nonbonded interactions
+; Col 7: Generate 1,4 interactions between pairs of hydrogens if 1
+; Col 8: Remove impropers over the same bond as a proper if it is 1
+; bonds  angles  dihedrals  impropers all_dihedrals nrexcl HH14 RemoveDih
+     1       1          9          4        1         3      1     0   
+
+; now: all residues defined in the force-field
+[ RU5 ]
+  [ atoms ]
+    H5T       HO_r        0.429500     1; {boccalini 2024}
+    O5'       OH_r       -0.622300     2; {boccalini 2024}
+    C5'       CI_r        0.055800     3; {boccalini 2024}
+    H5'1      H1_r        0.067900     4; {boccalini 2024}
+    H5'2      H1_r        0.067900     5; {boccalini 2024}
+    C4'       CJ_r        0.106500     6; {boccalini 2024}
+    H4'       H1_r        0.117400     7; {boccalini 2024}
+    O4'       OS_r       -0.354800     8; {boccalini 2024}
+    C1'       CT_r        0.067400     9; {boccalini 2024}
+    H1'       H2_r        0.182400    10; {boccalini 2024}
+    N1        N&_r        0.041800    11; {boccalini 2024}
+    C6        CMU_r      -0.112600    12; {boccalini 2024}
+    H6        H4_r        0.218800    13; {boccalini 2024}
+    C5        CMU_r      -0.363500    14; {boccalini 2024}
+    H5        HA_r        0.181100    15; {boccalini 2024}
+    C4        C_r         0.595200    16; {boccalini 2024}
+    O4        O_r        -0.576100    17; {boccalini 2024}
+    N3        NA_r       -0.391300    18; {boccalini 2024}
+    H3        H_r         0.351800    19; {boccalini 2024}
+    C2        C_r         0.468700    20; {boccalini 2024}
+    O2        O_r        -0.547700    21; {boccalini 2024}
+    C3'       CT_r        0.202200    22; {boccalini 2024}
+    H3'       H1_r        0.061500    23; {boccalini 2024}
+    C2'       CT_r        0.167000    24; {boccalini 2024}
+    H2'1      H1_r        0.097200    25; {boccalini 2024}
+    O2'       OH_r       -0.683900    26; {boccalini 2024}
+    HO'2      HO_r        0.388600    27; {boccalini 2024}
+    O3'       OS_OR_r    -0.524600    28; {boccalini 2024}
+  [ bonds ]
+    H5T       O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N1      
+    N1        C6      
+    C6        H6      
+    C6        C5      
+    C5        H5      
+    C5        C4      
+    C4        O4      
+    C4        N3      
+    N3        H3      
+    N3        C2      
+    C2        O2      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    C1'       C2'     
+    N1        C2      
+  [ impropers ]
+    C2        C6       N1       C1'     
+    C6        C4       C5       H5      
+    N1        N3       C2       O2      
+    C5        N3       C4       O4      
+    C4        C2       N3       H3      
+    N1        C5       C6       H6      
+
+[ RUN ]
+  [ atoms ]
+    H5T       HO_r        0.429500     1; {boccalini 2024}
+    O5'       OH_r       -0.622300     2; {boccalini 2024}
+    C5'       CI_r        0.055800     3; {boccalini 2024}
+    H5'1      H1_r        0.067900     4; {boccalini 2024}
+    H5'2      H1_r        0.067900     5; {boccalini 2024}
+    C4'       CJ_r        0.106500     6; {boccalini 2024}
+    H4'       H1_r        0.117400     7; {boccalini 2024}
+    O4'       OS_r       -0.354800     8; {boccalini 2024}
+    C1'       CT_r        0.067400     9; {boccalini 2024}
+    H1'       H2_r        0.182400    10; {boccalini 2024}
+    N1        N&_r        0.041800    11; {boccalini 2024}
+    C6        CMU_r      -0.112600    12; {boccalini 2024}
+    H6        H4_r        0.218800    13; {boccalini 2024}
+    C5        CMU_r      -0.363500    14; {boccalini 2024}
+    H5        HA_r        0.181100    15; {boccalini 2024}
+    C4        C_r         0.595200    16; {boccalini 2024}
+    O4        O_r        -0.576100    17; {boccalini 2024}
+    N3        NA_r       -0.391300    18; {boccalini 2024}
+    H3        H_r         0.351800    19; {boccalini 2024}
+    C2        C_r         0.468700    20; {boccalini 2024}
+    O2        O_r        -0.547700    21; {boccalini 2024}
+    C3'       CT_r        0.202200    22; {boccalini 2024}
+    H3'       H1_r        0.061500    23; {boccalini 2024}
+    C2'       CT_r        0.167000    24; {boccalini 2024}
+    H2'1      H1_r        0.097200    25; {boccalini 2024}
+    O2'       OH_r       -0.683900    26; {boccalini 2024}
+    HO'2      HO_r        0.388600    27; {boccalini 2024}
+    O3'       OH_r       -0.654100    28; {boccalini 2024}
+    H3T       HO_r        0.437600    29; {boccalini 2024}
+  [ bonds ]
+    H5T       O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N1      
+    N1        C6      
+    C6        H6      
+    C6        C5      
+    C5        H5      
+    C5        C4      
+    C4        O4      
+    C4        N3      
+    N3        H3      
+    N3        C2      
+    C2        O2      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    O3'       H3T     
+    C1'       C2'     
+    N1        C2      
+  [ impropers ]
+    C2        C6       N1       C1'     
+    C6        C4       C5       H5      
+    N1        N3       C2       O2      
+    C5        N3       C4       O4      
+    C4        C2       N3       H3      
+    N1        C5       C6       H6      
+
+[ RC5 ]
+  [ atoms ]
+    H5T       HO_r        0.429500     1; {boccalini 2024}
+    O5'       OH_r       -0.622300     2; {boccalini 2024}
+    C5'       CI_r        0.055800     3; {boccalini 2024}
+    H5'1      H1_r        0.067900     4; {boccalini 2024}
+    H5'2      H1_r        0.067900     5; {boccalini 2024}
+    C4'       CJ_r        0.106500     6; {boccalini 2024}
+    H4'       H1_r        0.117400     7; {boccalini 2024}
+    O4'       OS_r       -0.354800     8; {boccalini 2024}
+    C1'       CT_r        0.006600     9; {boccalini 2024}
+    H1'       H2_r        0.202900    10; {boccalini 2024}
+    N1        N&_r       -0.048400    11; {boccalini 2024}
+    C6        CMC_r       0.005300    12; {boccalini 2024}
+    H6        H4_r        0.195800    13; {boccalini 2024}
+    C5        CMC_r      -0.521500    14; {boccalini 2024}
+    H5        HA_r        0.192800    15; {boccalini 2024}
+    C4        CA_r        0.818500    16; {boccalini 2024}
+    N4        N2_r       -0.871600    17; {boccalini 2024}
+    H41       H_r         0.382700    18; {boccalini 2024}
+    H42       H_r         0.382700    19; {boccalini 2024}
+    N3        NC_r       -0.758400    20; {boccalini 2024}
+    C2        C_r         0.753800    21; {boccalini 2024}
+    O2        O_r        -0.625200    22; {boccalini 2024}
+    C3'       CT_r        0.202200    23; {boccalini 2024}
+    H3'       H1_r        0.061500    24; {boccalini 2024}
+    C2'       CT_r        0.167000    25; {boccalini 2024}
+    H2'1      H1_r        0.097200    26; {boccalini 2024}
+    O2'       OH_r       -0.683900    27; {boccalini 2024}
+    HO'2      HO_r        0.388600    28; {boccalini 2024}
+    O3'       OS_OR_r    -0.524600    29; {boccalini 2024}
+  [ bonds ]
+    H5T       O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N1      
+    N1        C6      
+    C6        H6      
+    C6        C5      
+    C5        H5      
+    C5        C4      
+    C4        N4      
+    N4        H41     
+    N4        H42     
+    C4        N3      
+    N3        C2      
+    C2        O2      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    C1'       C2'     
+    N1        C2      
+  [ impropers ]
+    C2        C6       N1       C1'     
+    N1        N3       C2       O2      
+    C4        H41      N4       H42     
+    N1        C5       C6       H6      
+    C6        C4       C5       H5      
+    C5        N4       C4       N3      
+
+[ RCN ]
+  [ atoms ]
+    H5T       HO_r        0.429500     1; {boccalini 2024}
+    O5'       OH_r       -0.622300     2; {boccalini 2024}
+    C5'       CI_r        0.055800     3; {boccalini 2024}
+    H5'1      H1_r        0.067900     4; {boccalini 2024}
+    H5'2      H1_r        0.067900     5; {boccalini 2024}
+    C4'       CJ_r        0.106500     6; {boccalini 2024}
+    H4'       H1_r        0.117400     7; {boccalini 2024}
+    O4'       OS_r       -0.354800     8; {boccalini 2024}
+    C1'       CT_r        0.006600     9; {boccalini 2024}
+    H1'       H2_r        0.202900    10; {boccalini 2024}
+    N1        N&_r       -0.048400    11; {boccalini 2024}
+    C6        CMC_r       0.005300    12; {boccalini 2024}
+    H6        H4_r        0.195800    13; {boccalini 2024}
+    C5        CMC_r      -0.521500    14; {boccalini 2024}
+    H5        HA_r        0.192800    15; {boccalini 2024}
+    C4        CA_r        0.818500    16; {boccalini 2024}
+    N4        N2_r       -0.871600    17; {boccalini 2024}
+    H41       H_r         0.382700    18; {boccalini 2024}
+    H42       H_r         0.382700    19; {boccalini 2024}
+    N3        NC_r       -0.758400    20; {boccalini 2024}
+    C2        C_r         0.753800    21; {boccalini 2024}
+    O2        O_r        -0.625200    22; {boccalini 2024}
+    C3'       CT_r        0.202200    23; {boccalini 2024}
+    H3'       H1_r        0.061500    24; {boccalini 2024}
+    C2'       CT_r        0.167000    25; {boccalini 2024}
+    H2'1      H1_r        0.097200    26; {boccalini 2024}
+    O2'       OH_r       -0.683900    27; {boccalini 2024}
+    HO'2      HO_r        0.388600    28; {boccalini 2024}
+    O3'       OH_r       -0.654100    29; {boccalini 2024}
+    H3T       HO_r        0.437600    30; {boccalini 2024}
+  [ bonds ]
+    H5T       O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N1      
+    N1        C6      
+    C6        H6      
+    C6        C5      
+    C5        H5      
+    C5        C4      
+    C4        N4      
+    N4        H41     
+    N4        H42     
+    C4        N3      
+    N3        C2      
+    C2        O2      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    O3'       H3T     
+    C1'       C2'     
+    N1        C2      
+  [ impropers ]
+    C2        C6       N1       C1'     
+    N1        N3       C2       O2      
+    C4        H41      N4       H42     
+    N1        C5       C6       H6      
+    C6        C4       C5       H5      
+    C5        N4       C4       N3      
+
+[ RU ]
+  [ atoms ]
+    P         P_r         1.266200     1; {boccalini 2024}
+    O1P       OP_r       -0.776000     2; {boccalini 2024}
+    O2P       OP_r       -0.776000     3; {boccalini 2024}
+    O5'       OS_OR_r    -0.498900     4; {boccalini 2024}
+    C5'       CI_r        0.055800     5; {boccalini 2024}
+    H5'1      H1_r        0.067900     6; {boccalini 2024}
+    H5'2      H1_r        0.067900     7; {boccalini 2024}
+    C4'       CJ_r        0.106500     8; {boccalini 2024}
+    H4'       H1_r        0.117400     9; {boccalini 2024}
+    O4'       OS_r       -0.354800    10; {boccalini 2024}
+    C1'       CT_r        0.067400    11; {boccalini 2024}
+    H1'       H2_r        0.182400    12; {boccalini 2024}
+    N1        N&_r        0.041800    13; {boccalini 2024}
+    C6        CMU_r      -0.112600    14; {boccalini 2024}
+    H6        H4_r        0.218800    15; {boccalini 2024}
+    C5        CMU_r      -0.363500    16; {boccalini 2024}
+    H5        HA_r        0.181100    17; {boccalini 2024}
+    C4        C_r         0.595200    18; {boccalini 2024}
+    O4        O_r        -0.576100    19; {boccalini 2024}
+    N3        NA_r       -0.391300    20; {boccalini 2024}
+    H3        H_r         0.351800    21; {boccalini 2024}
+    C2        C_r         0.468700    22; {boccalini 2024}
+    O2        O_r        -0.547700    23; {boccalini 2024}
+    C3'       CT_r        0.202200    24; {boccalini 2024}
+    H3'       H1_r        0.061500    25; {boccalini 2024}
+    C2'       CT_r        0.167000    26; {boccalini 2024}
+    H2'1      H1_r        0.097200    27; {boccalini 2024}
+    O2'       OH_r       -0.683900    28; {boccalini 2024}
+    HO'2      HO_r        0.388600    29; {boccalini 2024}
+    O3'       OS_OR_r    -0.524600    30; {boccalini 2024}
+  [ bonds ]
+    P         O1P     
+    P         O2P     
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N1      
+    N1        C6      
+    C6        H6      
+    C6        C5      
+    C5        H5      
+    C5        C4      
+    C4        O4      
+    C4        N3      
+    N3        H3      
+    N3        C2      
+    C2        O2      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    P         -O3'    
+    C1'       C2'     
+    N1        C2      
+  [ impropers ]
+    C2        C6       N1       C1'     
+    C6        C4       C5       H5      
+    N1        N3       C2       O2      
+    C5        N3       C4       O4      
+    C4        C2       N3       H3      
+    N1        C5       C6       H6      
+
+[ RUMP5 ]
+  [ atoms ]
+    OP3       OH_OP_r    -0.459700     1; {boccalini 2024}
+    HOP3      HO_r        0.450000     2; {boccalini 2024}
+    P         P_r         0.764600     3; {boccalini 2024}
+    OP1       OP_r       -0.609700     4; {boccalini 2024}
+    OP2       OP_r       -0.609700     5; {boccalini 2024}
+    O5'       OS_OR_r    -0.628300     6; {boccalini 2024}
+    C5'       CI_r        0.055800     7; {boccalini 2024}
+    H5'1      H1_r        0.067900     8; {boccalini 2024}
+    H5'2      H1_r        0.067900     9; {boccalini 2024}
+    C4'       CJ_r        0.106500    10; {boccalini 2024}
+    H4'       H1_r        0.117400    11; {boccalini 2024}
+    O4'       OS_r       -0.354800    12; {boccalini 2024}
+    C1'       CT_r        0.067400    13; {boccalini 2024}
+    H1'       H2_r        0.182400    14; {boccalini 2024}
+    N1        N&_r        0.041800    15; {boccalini 2024}
+    C6        CMU_r      -0.112600    16; {boccalini 2024}
+    H6        H4_r        0.218800    17; {boccalini 2024}
+    C5        CMU_r      -0.363500    18; {boccalini 2024}
+    H5        HA_r        0.181100    19; {boccalini 2024}
+    C4        C_r         0.595200    20; {boccalini 2024}
+    O4        O_r        -0.576100    21; {boccalini 2024}
+    N3        NA_r       -0.391300    22; {boccalini 2024}
+    H3        H_r         0.351800    23; {boccalini 2024}
+    C2        C_r         0.468700    24; {boccalini 2024}
+    O2        O_r        -0.547700    25; {boccalini 2024}
+    C3'       CT_r        0.202200    26; {boccalini 2024}
+    H3'       H1_r        0.061500    27; {boccalini 2024}
+    C2'       CT_r        0.067000    28; {boccalini 2024}
+    H2'1      H1_r        0.097200    29; {boccalini 2024}
+    O2'       OH_r       -0.613900    30; {boccalini 2024}
+    HO'2      HO_r        0.418600    31; {boccalini 2024}
+    O3'       OS_OR_r    -0.524600    32; {boccalini 2024}
+  [ bonds ]
+    P         OP1     
+    P         OP2     
+    OP3       P       
+    OP3       HOP3    
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N1      
+    N1        C6      
+    C6        H6      
+    C6        C5      
+    C5        H5      
+    C5        C4      
+    C4        O4      
+    C4        N3      
+    N3        H3      
+    N3        C2      
+    C2        O2      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    C1'       C2'     
+    N1        C2      
+  [ impropers ]
+    C2        C6       N1       C1'     
+    C6        C4       C5       H5      
+    N1        N3       C2       O2      
+    C5        N3       C4       O4      
+    C4        C2       N3       H3      
+    N1        C5       C6       H6      
+
+[ RU3 ]
+  [ atoms ]
+    P         P_r         1.266200     1; {boccalini 2024}
+    O1P       OP_r       -0.776000     2; {boccalini 2024}
+    O2P       OP_r       -0.776000     3; {boccalini 2024}
+    O5'       OS_OR_r    -0.498900     4; {boccalini 2024}
+    C5'       CI_r        0.055800     5; {boccalini 2024}
+    H5'1      H1_r        0.067900     6; {boccalini 2024}
+    H5'2      H1_r        0.067900     7; {boccalini 2024}
+    C4'       CJ_r        0.106500     8; {boccalini 2024}
+    H4'       H1_r        0.117400     9; {boccalini 2024}
+    O4'       OS_r       -0.354800    10; {boccalini 2024}
+    C1'       CT_r        0.067400    11; {boccalini 2024}
+    H1'       H2_r        0.182400    12; {boccalini 2024}
+    N1        N&_r        0.041800    13; {boccalini 2024}
+    C6        CMU_r      -0.112600    14; {boccalini 2024}
+    H6        H4_r        0.218800    15; {boccalini 2024}
+    C5        CMU_r      -0.363500    16; {boccalini 2024}
+    H5        HA_r        0.181100    17; {boccalini 2024}
+    C4        C_r         0.595200    18; {boccalini 2024}
+    O4        O_r        -0.576100    19; {boccalini 2024}
+    N3        NA_r       -0.391300    20; {boccalini 2024}
+    H3        H_r         0.351800    21; {boccalini 2024}
+    C2        C_r         0.468700    22; {boccalini 2024}
+    O2        O_r        -0.547700    23; {boccalini 2024}
+    C3'       CT_r        0.202200    24; {boccalini 2024}
+    H3'       H1_r        0.061500    25; {boccalini 2024}
+    C2'       CT_r        0.167000    26; {boccalini 2024}
+    H2'1      H1_r        0.097200    27; {boccalini 2024}
+    O2'       OH_r       -0.683900    28; {boccalini 2024}
+    HO'2      HO_r        0.388600    29; {boccalini 2024}
+    O3'       OH_r       -0.654100    30; {boccalini 2024}
+    H3T       HO_r        0.437600    31; {boccalini 2024}
+  [ bonds ]
+    P         O1P     
+    P         O2P     
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N1      
+    N1        C6      
+    C6        H6      
+    C6        C5      
+    C5        H5      
+    C5        C4      
+    C4        O4      
+    C4        N3      
+    N3        H3      
+    N3        C2      
+    C2        O2      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    O3'       H3T     
+    P         -O3'    
+    C1'       C2'     
+    N1        C2      
+  [ impropers ]
+    C2        C6       N1       C1'     
+    C6        C4       C5       H5      
+    N1        N3       C2       O2      
+    C5        N3       C4       O4      
+    C4        C2       N3       H3      
+    N1        C5       C6       H6      
+
+[ RUMP ]
+  [ atoms ]
+    OP3       OP_r       -0.709700     1; {boccalini 2024}
+    P         P_r         0.764600     2; {boccalini 2024}
+    OP1       OP_r       -0.709700     3; {boccalini 2024}
+    OP2       OP_r       -0.709700     4; {boccalini 2024}
+    O5'       OS_OR_r    -0.628300     5; {boccalini 2024}
+    C5'       CI_r        0.055800     6; {boccalini 2024}
+    H5'1      H1_r        0.067900     7; {boccalini 2024}
+    H5'2      H1_r        0.067900     8; {boccalini 2024}
+    C4'       CJ_r        0.106500     9; {boccalini 2024}
+    H4'       H1_r        0.117400    10; {boccalini 2024}
+    O4'       OS_r       -0.354800    11; {boccalini 2024}
+    C1'       CT_r        0.067400    12; {boccalini 2024}
+    H1'       H2_r        0.182400    13; {boccalini 2024}
+    N1        N&_r        0.041800    14; {boccalini 2024}
+    C6        CMU_r      -0.112600    15; {boccalini 2024}
+    H6        H4_r        0.218800    16; {boccalini 2024}
+    C5        CMU_r      -0.363500    17; {boccalini 2024}
+    H5        HA_r        0.181100    18; {boccalini 2024}
+    C4        C_r         0.595200    19; {boccalini 2024}
+    O4        O_r        -0.576100    20; {boccalini 2024}
+    N3        NA_r       -0.391300    21; {boccalini 2024}
+    H3        H_r         0.351800    22; {boccalini 2024}
+    C2        C_r         0.468700    23; {boccalini 2024}
+    O2        O_r        -0.547700    24; {boccalini 2024}
+    C3'       CT_r        0.202200    25; {boccalini 2024}
+    H3'       H1_r        0.061500    26; {boccalini 2024}
+    C2'       CT_r        0.067000    27; {boccalini 2024}
+    H2'1      H1_r        0.097200    28; {boccalini 2024}
+    O2'       OH_r       -0.613900    29; {boccalini 2024}
+    HO'2      HO_r        0.418600    30; {boccalini 2024}
+    O3'       OH_r       -0.635100    31; {boccalini 2024}
+    H3T       HO_r        0.418600    32; {boccalini 2024}
+  [ bonds ]
+    P         OP1     
+    P         OP2     
+    OP3       P       
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N1      
+    N1        C6      
+    C6        H6      
+    C6        C5      
+    C5        H5      
+    C5        C4      
+    C4        O4      
+    C4        N3      
+    N3        H3      
+    N3        C2      
+    C2        O2      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    O3'       H3T     
+    C1'       C2'     
+    N1        C2      
+  [ impropers ]
+    C2        C6       N1       C1'     
+    C6        C4       C5       H5      
+    N1        N3       C2       O2      
+    C5        N3       C4       O4      
+    C4        C2       N3       H3      
+    N1        C5       C6       H6      
+
+[ RC ]
+  [ atoms ]
+    P         P_r         1.266200     1; {boccalini 2024}
+    O1P       OP_r       -0.776000     2; {boccalini 2024}
+    O2P       OP_r       -0.776000     3; {boccalini 2024}
+    O5'       OS_OR_r    -0.498900     4; {boccalini 2024}
+    C5'       CI_r        0.055800     5; {boccalini 2024}
+    H5'1      H1_r        0.067900     6; {boccalini 2024}
+    H5'2      H1_r        0.067900     7; {boccalini 2024}
+    C4'       CJ_r        0.106500     8; {boccalini 2024}
+    H4'       H1_r        0.117400     9; {boccalini 2024}
+    O4'       OS_r       -0.354800    10; {boccalini 2024}
+    C1'       CT_r        0.006600    11; {boccalini 2024}
+    H1'       H2_r        0.202900    12; {boccalini 2024}
+    N1        N&_r       -0.048400    13; {boccalini 2024}
+    C6        CMC_r       0.005300    14; {boccalini 2024}
+    H6        H4_r        0.195800    15; {boccalini 2024}
+    C5        CMC_r      -0.521500    16; {boccalini 2024}
+    H5        HA_r        0.192800    17; {boccalini 2024}
+    C4        CA_r        0.818500    18; {boccalini 2024}
+    N4        N2_r       -0.871600    19; {boccalini 2024}
+    H41       H_r         0.382700    20; {boccalini 2024}
+    H42       H_r         0.382700    21; {boccalini 2024}
+    N3        NC_r       -0.758400    22; {boccalini 2024}
+    C2        C_r         0.753800    23; {boccalini 2024}
+    O2        O_r        -0.625200    24; {boccalini 2024}
+    C3'       CT_r        0.202200    25; {boccalini 2024}
+    H3'       H1_r        0.061500    26; {boccalini 2024}
+    C2'       CT_r        0.167000    27; {boccalini 2024}
+    H2'1      H1_r        0.097200    28; {boccalini 2024}
+    O2'       OH_r       -0.683900    29; {boccalini 2024}
+    HO'2      HO_r        0.388600    30; {boccalini 2024}
+    O3'       OS_OR_r    -0.524600    31; {boccalini 2024}
+  [ bonds ]
+    P         O1P     
+    P         O2P     
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N1      
+    N1        C6      
+    C6        H6      
+    C6        C5      
+    C5        H5      
+    C5        C4      
+    C4        N4      
+    N4        H41     
+    N4        H42     
+    C4        N3      
+    N3        C2      
+    C2        O2      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    P         -O3'    
+    C1'       C2'     
+    N1        C2      
+  [ impropers ]
+    C2        C6       N1       C1'     
+    N1        N3       C2       O2      
+    C4        H41      N4       H42     
+    N1        C5       C6       H6      
+    C6        C4       C5       H5      
+    C5        N4       C4       N3      
+
+[ RCMP5 ]
+  [ atoms ]
+    OP3       OH_OP_r    -0.459700     1; {boccalini 2024}
+    HOP3      HO_r        0.450000     2; {boccalini 2024}
+    P         P_r         0.764600     3; {boccalini 2024}
+    OP1       OP_r       -0.609700     4; {boccalini 2024}
+    OP2       OP_r       -0.609700     5; {boccalini 2024}
+    O5'       OS_OR_r    -0.628300     6; {boccalini 2024}
+    C5'       CI_r        0.055800     7; {boccalini 2024}
+    H5'1      H1_r        0.067900     8; {boccalini 2024}
+    H5'2      H1_r        0.067900     9; {boccalini 2024}
+    C4'       CJ_r        0.106500    10; {boccalini 2024}
+    H4'       H1_r        0.117400    11; {boccalini 2024}
+    O4'       OS_r       -0.354800    12; {boccalini 2024}
+    C1'       CT_r        0.006600    13; {boccalini 2024}
+    H1'       H2_r        0.202900    14; {boccalini 2024}
+    N1        N&_r       -0.048400    15; {boccalini 2024}
+    C6        CMC_r       0.005300    16; {boccalini 2024}
+    H6        H4_r        0.195800    17; {boccalini 2024}
+    C5        CMC_r      -0.521500    18; {boccalini 2024}
+    H5        HA_r        0.192800    19; {boccalini 2024}
+    C4        CA_r        0.818500    20; {boccalini 2024}
+    N4        N2_r       -0.871600    21; {boccalini 2024}
+    H41       H_r         0.382700    22; {boccalini 2024}
+    H42       H_r         0.382700    23; {boccalini 2024}
+    N3        NC_r       -0.758400    24; {boccalini 2024}
+    C2        C_r         0.753800    25; {boccalini 2024}
+    O2        O_r        -0.625200    26; {boccalini 2024}
+    C3'       CT_r        0.202200    27; {boccalini 2024}
+    H3'       H1_r        0.061500    28; {boccalini 2024}
+    C2'       CT_r        0.067000    29; {boccalini 2024}
+    H2'1      H1_r        0.097200    30; {boccalini 2024}
+    O2'       OH_r       -0.613900    31; {boccalini 2024}
+    HO'2      HO_r        0.418600    32; {boccalini 2024}
+    O3'       OS_OR_r    -0.524600    33; {boccalini 2024}
+  [ bonds ]
+    P         OP1     
+    P         OP2     
+    OP3       P       
+    OP3       HOP3    
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N1      
+    N1        C6      
+    C6        H6      
+    C6        C5      
+    C5        H5      
+    C5        C4      
+    C4        N4      
+    N4        H41     
+    N4        H42     
+    C4        N3      
+    N3        C2      
+    C2        O2      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    C1'       C2'     
+    N1        C2      
+  [ impropers ]
+    C2        C6       N1       C1'     
+    N1        N3       C2       O2      
+    C4        H41      N4       H42     
+    N1        C5       C6       H6      
+    C6        C4       C5       H5      
+    C5        N4       C4       N3      
+
+[ RA5 ]
+  [ atoms ]
+    H5T       HO_r        0.429500     1; {boccalini 2024}
+    O5'       OH_r       -0.622300     2; {boccalini 2024}
+    C5'       CI_r        0.055800     3; {boccalini 2024}
+    H5'1      H1_r        0.067900     4; {boccalini 2024}
+    H5'2      H1_r        0.067900     5; {boccalini 2024}
+    C4'       CJ_r        0.106500     6; {boccalini 2024}
+    H4'       H1_r        0.117400     7; {boccalini 2024}
+    O4'       OS_r       -0.354800     8; {boccalini 2024}
+    C1'       CT_r        0.039400     9; {boccalini 2024}
+    H1'       H2_r        0.200700    10; {boccalini 2024}
+    N9        N&_NA_r    -0.025100    11; {boccalini 2024}
+    C8        CKA_r       0.200600    12; {boccalini 2024}
+    H8        H5_r        0.155300    13; {boccalini 2024}
+    N7        NB_r       -0.607300    14; {boccalini 2024}
+    C5        CB_r        0.051500    15; {boccalini 2024}
+    C6        CA_CA_r     0.700900    16; {boccalini 2024}
+    N6        N2_r       -1.008800    17; {boccalini 2024}
+    H61       H_r         0.473800    18; {boccalini 2024}
+    H62       H_r         0.473800    19; {boccalini 2024}
+    N1        NC_NA_r    -0.796900    20; {boccalini 2024}
+    C2        CQ_r        0.587500    21; {boccalini 2024}
+    H2        H5_r        0.065000    22; {boccalini 2024}
+    N3        NC_NA_r    -0.699700    23; {boccalini 2024}
+    C4        CB_r        0.305300    24; {boccalini 2024}
+    C3'       CT_r        0.202200    25; {boccalini 2024}
+    H3'       H1_r        0.061500    26; {boccalini 2024}
+    C2'       CT_r        0.167000    27; {boccalini 2024}
+    H2'1      H1_r        0.097200    28; {boccalini 2024}
+    O2'       OH_r       -0.683900    29; {boccalini 2024}
+    HO'2      HO_r        0.388600    30; {boccalini 2024}
+    O3'       OS_OR_r    -0.524600    31; {boccalini 2024}
+  [ bonds ]
+    H5T       O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N9      
+    N9        C8      
+    C8        H8      
+    C8        N7      
+    N7        C5      
+    C5        C6      
+    C6        N6      
+    N6        H61     
+    N6        H62     
+    C6        N1      
+    N1        C2      
+    C2        H2      
+    C2        N3      
+    N3        C4      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    C1'       C2'     
+    C5        C4      
+    N9        C4      
+  [ impropers ]
+    C4        C8       N9       C1'     
+    C6        H61      N6       H62     
+    N9        N7       C8       H8      
+    N1        N3       C2       H2      
+    C5        N6       C6       N1      
+
+[ RC3 ]
+  [ atoms ]
+    P         P_r         1.266200     1; {boccalini 2024}
+    O1P       OP_r       -0.776000     2; {boccalini 2024}
+    O2P       OP_r       -0.776000     3; {boccalini 2024}
+    O5'       OS_OR_r    -0.498900     4; {boccalini 2024}
+    C5'       CI_r        0.055800     5; {boccalini 2024}
+    H5'1      H1_r        0.067900     6; {boccalini 2024}
+    H5'2      H1_r        0.067900     7; {boccalini 2024}
+    C4'       CJ_r        0.106500     8; {boccalini 2024}
+    H4'       H1_r        0.117400     9; {boccalini 2024}
+    O4'       OS_r       -0.354800    10; {boccalini 2024}
+    C1'       CT_r        0.006600    11; {boccalini 2024}
+    H1'       H2_r        0.202900    12; {boccalini 2024}
+    N1        N&_r       -0.048400    13; {boccalini 2024}
+    C6        CMC_r       0.005300    14; {boccalini 2024}
+    H6        H4_r        0.195800    15; {boccalini 2024}
+    C5        CMC_r      -0.521500    16; {boccalini 2024}
+    H5        HA_r        0.192800    17; {boccalini 2024}
+    C4        CA_r        0.818500    18; {boccalini 2024}
+    N4        N2_r       -0.871600    19; {boccalini 2024}
+    H41       H_r         0.382700    20; {boccalini 2024}
+    H42       H_r         0.382700    21; {boccalini 2024}
+    N3        NC_r       -0.758400    22; {boccalini 2024}
+    C2        C_r         0.753800    23; {boccalini 2024}
+    O2        O_r        -0.625200    24; {boccalini 2024}
+    C3'       CT_r        0.202200    25; {boccalini 2024}
+    H3'       H1_r        0.061500    26; {boccalini 2024}
+    C2'       CT_r        0.167000    27; {boccalini 2024}
+    H2'1      H1_r        0.097200    28; {boccalini 2024}
+    O2'       OH_r       -0.683900    29; {boccalini 2024}
+    HO'2      HO_r        0.388600    30; {boccalini 2024}
+    O3'       OH_r       -0.654100    31; {boccalini 2024}
+    H3T       HO_r        0.437600    32; {boccalini 2024}
+  [ bonds ]
+    P         O1P     
+    P         O2P     
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N1      
+    N1        C6      
+    C6        H6      
+    C6        C5      
+    C5        H5      
+    C5        C4      
+    C4        N4      
+    N4        H41     
+    N4        H42     
+    C4        N3      
+    N3        C2      
+    C2        O2      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    O3'       H3T     
+    P         -O3'    
+    C1'       C2'     
+    N1        C2      
+  [ impropers ]
+    C2        C6       N1       C1'     
+    N1        N3       C2       O2      
+    C4        H41      N4       H42     
+    N1        C5       C6       H6      
+    C6        C4       C5       H5      
+    C5        N4       C4       N3      
+
+[ RCMP ]
+  [ atoms ]
+    OP3       OP_r       -0.709700     1; {boccalini 2024}
+    P         P_r         0.764600     2; {boccalini 2024}
+    OP1       OP_r       -0.709700     3; {boccalini 2024}
+    OP2       OP_r       -0.709700     4; {boccalini 2024}
+    O5'       OS_OR_r    -0.628300     5; {boccalini 2024}
+    C5'       CI_r        0.055800     6; {boccalini 2024}
+    H5'1      H1_r        0.067900     7; {boccalini 2024}
+    H5'2      H1_r        0.067900     8; {boccalini 2024}
+    C4'       CJ_r        0.106500     9; {boccalini 2024}
+    H4'       H1_r        0.117400    10; {boccalini 2024}
+    O4'       OS_r       -0.354800    11; {boccalini 2024}
+    C1'       CT_r        0.006600    12; {boccalini 2024}
+    H1'       H2_r        0.202900    13; {boccalini 2024}
+    N1        N&_r       -0.048400    14; {boccalini 2024}
+    C6        CMC_r       0.005300    15; {boccalini 2024}
+    H6        H4_r        0.195800    16; {boccalini 2024}
+    C5        CMC_r      -0.521500    17; {boccalini 2024}
+    H5        HA_r        0.192800    18; {boccalini 2024}
+    C4        CA_r        0.818500    19; {boccalini 2024}
+    N4        N2_r       -0.871600    20; {boccalini 2024}
+    H41       H_r         0.382700    21; {boccalini 2024}
+    H42       H_r         0.382700    22; {boccalini 2024}
+    N3        NC_r       -0.758400    23; {boccalini 2024}
+    C2        C_r         0.753800    24; {boccalini 2024}
+    O2        O_r        -0.625200    25; {boccalini 2024}
+    C3'       CT_r        0.202200    26; {boccalini 2024}
+    H3'       H1_r        0.061500    27; {boccalini 2024}
+    C2'       CT_r        0.067000    28; {boccalini 2024}
+    H2'1      H1_r        0.097200    29; {boccalini 2024}
+    O2'       OH_r       -0.613900    30; {boccalini 2024}
+    HO'2      HO_r        0.418600    31; {boccalini 2024}
+    O3'       OH_r       -0.635100    32; {boccalini 2024}
+    H3T       HO_r        0.418600    33; {boccalini 2024}
+  [ bonds ]
+    P         OP1     
+    P         OP2     
+    OP3       P       
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N1      
+    N1        C6      
+    C6        H6      
+    C6        C5      
+    C5        H5      
+    C5        C4      
+    C4        N4      
+    N4        H41     
+    N4        H42     
+    C4        N3      
+    N3        C2      
+    C2        O2      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    O3'       H3T     
+    C1'       C2'     
+    N1        C2      
+  [ impropers ]
+    C2        C6       N1       C1'     
+    N1        N3       C2       O2      
+    C4        H41      N4       H42     
+    N1        C5       C6       H6      
+    C6        C4       C5       H5      
+    C5        N4       C4       N3      
+
+[ RAN ]
+  [ atoms ]
+    H5T       HO_r        0.429500     1; {boccalini 2024}
+    O5'       OH_r       -0.622300     2; {boccalini 2024}
+    C5'       CI_r        0.055800     3; {boccalini 2024}
+    H5'1      H1_r        0.067900     4; {boccalini 2024}
+    H5'2      H1_r        0.067900     5; {boccalini 2024}
+    C4'       CJ_r        0.106500     6; {boccalini 2024}
+    H4'       H1_r        0.117400     7; {boccalini 2024}
+    O4'       OS_r       -0.354800     8; {boccalini 2024}
+    C1'       CT_r        0.039400     9; {boccalini 2024}
+    H1'       H2_r        0.200700    10; {boccalini 2024}
+    N9        N&_NA_r    -0.025100    11; {boccalini 2024}
+    C8        CKA_r       0.200600    12; {boccalini 2024}
+    H8        H5_r        0.155300    13; {boccalini 2024}
+    N7        NB_r       -0.607300    14; {boccalini 2024}
+    C5        CB_r        0.051500    15; {boccalini 2024}
+    C6        CA_CA_r     0.700900    16; {boccalini 2024}
+    N6        N2_r       -1.008800    17; {boccalini 2024}
+    H61       H_r         0.473800    18; {boccalini 2024}
+    H62       H_r         0.473800    19; {boccalini 2024}
+    N1        NC_NA_r    -0.796900    20; {boccalini 2024}
+    C2        CQ_r        0.587500    21; {boccalini 2024}
+    H2        H5_r        0.065000    22; {boccalini 2024}
+    N3        NC_NA_r    -0.699700    23; {boccalini 2024}
+    C4        CB_r        0.305300    24; {boccalini 2024}
+    C3'       CT_r        0.202200    25; {boccalini 2024}
+    H3'       H1_r        0.061500    26; {boccalini 2024}
+    C2'       CT_r        0.167000    27; {boccalini 2024}
+    H2'1      H1_r        0.097200    28; {boccalini 2024}
+    O2'       OH_r       -0.683900    29; {boccalini 2024}
+    HO'2      HO_r        0.388600    30; {boccalini 2024}
+    O3'       OH_r       -0.654100    31; {boccalini 2024}
+    H3T       HO_r        0.437600    32; {boccalini 2024}
+  [ bonds ]
+    H5T       O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N9      
+    N9        C8      
+    C8        H8      
+    C8        N7      
+    N7        C5      
+    C5        C6      
+    C6        N6      
+    N6        H61     
+    N6        H62     
+    C6        N1      
+    N1        C2      
+    C2        H2      
+    C2        N3      
+    N3        C4      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    O3'       H3T     
+    C1'       C2'     
+    C5        C4      
+    N9        C4      
+  [ impropers ]
+    C4        C8       N9       C1'     
+    C6        H61      N6       H62     
+    N9        N7       C8       H8      
+    N1        N3       C2       H2      
+    C5        N6       C6       N1      
+
+[ RG5 ]
+  [ atoms ]
+    H5T       HO_r        0.429500     1; {boccalini 2024}
+    O5'       OH_r       -0.622300     2; {boccalini 2024}
+    C5'       CI_r        0.055800     3; {boccalini 2024}
+    H5'1      H1_r        0.067900     4; {boccalini 2024}
+    H5'2      H1_r        0.067900     5; {boccalini 2024}
+    C4'       CJ_r        0.106500     6; {boccalini 2024}
+    H4'       H1_r        0.117400     7; {boccalini 2024}
+    O4'       OS_r       -0.354800     8; {boccalini 2024}
+    C1'       CT_r        0.019100     9; {boccalini 2024}
+    H1'       H2_r        0.200600    10; {boccalini 2024}
+    N9        N&_NA_r     0.049200    11; {boccalini 2024}
+    C8        CKG_r       0.137400    12; {boccalini 2024}
+    H8        H5_r        0.164000    13; {boccalini 2024}
+    N7        NB_r       -0.570900    14; {boccalini 2024}
+    C5        CB_CN_r     0.174400    15; {boccalini 2024}
+    C6        C_r         0.477000    16; {boccalini 2024}
+    O6        O_r        -0.559700    17; {boccalini 2024}
+    N1        NA_r       -0.560600    18; {boccalini 2024}
+    H1        H_r         0.424300    19; {boccalini 2024}
+    C2        CA_r        0.765700    20; {boccalini 2024}
+    N2        N2_r       -1.015800    21; {boccalini 2024}
+    H21       H_r         0.460700    22; {boccalini 2024}
+    H22       H_r         0.460700    23; {boccalini 2024}
+    N3        NC_r       -0.632300    24; {boccalini 2024}
+    C4        CB_CN_r     0.122200    25; {boccalini 2024}
+    C3'       CT_r        0.202200    26; {boccalini 2024}
+    H3'       H1_r        0.061500    27; {boccalini 2024}
+    C2'       CT_r        0.167000    28; {boccalini 2024}
+    H2'1      H1_r        0.097200    29; {boccalini 2024}
+    O2'       OH_r       -0.683900    30; {boccalini 2024}
+    HO'2      HO_r        0.388600    31; {boccalini 2024}
+    O3'       OS_OR_r    -0.524600    32; {boccalini 2024}
+  [ bonds ]
+    H5T       O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N9      
+    N9        C8      
+    C8        H8      
+    C8        N7      
+    N7        C5      
+    C5        C6      
+    C6        O6      
+    C6        N1      
+    N1        H1      
+    N1        C2      
+    C2        N2      
+    N2        H21     
+    N2        H22     
+    C2        N3      
+    N3        C4      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    C1'       C2'     
+    C5        C4      
+    N9        C4      
+  [ impropers ]
+    C4        C8       N9       C1'     
+    C5        N1       C6       O6      
+    C6        C2       N1       H1      
+    C2        H21      N2       H22     
+    N9        N7       C8       H8      
+    N2        N1       C2       N3      
+
+[ RGN ]
+  [ atoms ]
+    H5T       HO_r        0.429500     1; {boccalini 2024}
+    O5'       OH_r       -0.622300     2; {boccalini 2024}
+    C5'       CI_r        0.055800     3; {boccalini 2024}
+    H5'1      H1_r        0.067900     4; {boccalini 2024}
+    H5'2      H1_r        0.067900     5; {boccalini 2024}
+    C4'       CJ_r        0.106500     6; {boccalini 2024}
+    H4'       H1_r        0.117400     7; {boccalini 2024}
+    O4'       OS_r       -0.354800     8; {boccalini 2024}
+    C1'       CT_r        0.019100     9; {boccalini 2024}
+    H1'       H2_r        0.200600    10; {boccalini 2024}
+    N9        N&_NA_r     0.049200    11; {boccalini 2024}
+    C8        CKG_r       0.137400    12; {boccalini 2024}
+    H8        H5_r        0.164000    13; {boccalini 2024}
+    N7        NB_r       -0.570900    14; {boccalini 2024}
+    C5        CB_CN_r     0.174400    15; {boccalini 2024}
+    C6        C_r         0.477000    16; {boccalini 2024}
+    O6        O_r        -0.559700    17; {boccalini 2024}
+    N1        NA_r       -0.560600    18; {boccalini 2024}
+    H1        H_r         0.424300    19; {boccalini 2024}
+    C2        CA_r        0.765700    20; {boccalini 2024}
+    N2        N2_r       -1.015800    21; {boccalini 2024}
+    H21       H_r         0.460700    22; {boccalini 2024}
+    H22       H_r         0.460700    23; {boccalini 2024}
+    N3        NC_r       -0.632300    24; {boccalini 2024}
+    C4        CB_CN_r     0.122200    25; {boccalini 2024}
+    C3'       CT_r        0.202200    26; {boccalini 2024}
+    H3'       H1_r        0.061500    27; {boccalini 2024}
+    C2'       CT_r        0.167000    28; {boccalini 2024}
+    H2'1      H1_r        0.097200    29; {boccalini 2024}
+    O2'       OH_r       -0.683900    30; {boccalini 2024}
+    HO'2      HO_r        0.388600    31; {boccalini 2024}
+    O3'       OH_r       -0.654100    32; {boccalini 2024}
+    H3T       HO_r        0.437600    33; {boccalini 2024}
+  [ bonds ]
+    H5T       O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N9      
+    N9        C8      
+    C8        H8      
+    C8        N7      
+    N7        C5      
+    C5        C6      
+    C6        O6      
+    C6        N1      
+    N1        H1      
+    N1        C2      
+    C2        N2      
+    N2        H21     
+    N2        H22     
+    C2        N3      
+    N3        C4      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    O3'       H3T     
+    C1'       C2'     
+    C5        C4      
+    N9        C4      
+  [ impropers ]
+    C4        C8       N9       C1'     
+    C5        N1       C6       O6      
+    C6        C2       N1       H1      
+    C2        H21      N2       H22     
+    N9        N7       C8       H8      
+    N2        N1       C2       N3      
+
+[ RA ]
+  [ atoms ]
+    P         P_r         1.266200     1; {boccalini 2024}
+    O1P       OP_r       -0.776000     2; {boccalini 2024}
+    O2P       OP_r       -0.776000     3; {boccalini 2024}
+    O5'       OS_OR_r    -0.498900     4; {boccalini 2024}
+    C5'       CI_r        0.055800     5; {boccalini 2024}
+    H5'1      H1_r        0.067900     6; {boccalini 2024}
+    H5'2      H1_r        0.067900     7; {boccalini 2024}
+    C4'       CJ_r        0.106500     8; {boccalini 2024}
+    H4'       H1_r        0.117400     9; {boccalini 2024}
+    O4'       OS_r       -0.354800    10; {boccalini 2024}
+    C1'       CT_r        0.039400    11; {boccalini 2024}
+    H1'       H2_r        0.200700    12; {boccalini 2024}
+    N9        N&_NA_r    -0.025100    13; {boccalini 2024}
+    C8        CKA_r       0.200600    14; {boccalini 2024}
+    H8        H5_r        0.155300    15; {boccalini 2024}
+    N7        NB_r       -0.607300    16; {boccalini 2024}
+    C5        CB_r        0.051500    17; {boccalini 2024}
+    C6        CA_CA_r     0.700900    18; {boccalini 2024}
+    N6        N2_r       -1.008800    19; {boccalini 2024}
+    H61       H_r         0.473800    20; {boccalini 2024}
+    H62       H_r         0.473800    21; {boccalini 2024}
+    N1        NC_NA_r    -0.796900    22; {boccalini 2024}
+    C2        CQ_r        0.587500    23; {boccalini 2024}
+    H2        H5_r        0.065000    24; {boccalini 2024}
+    N3        NC_NA_r    -0.699700    25; {boccalini 2024}
+    C4        CB_r        0.305300    26; {boccalini 2024}
+    C3'       CT_r        0.202200    27; {boccalini 2024}
+    H3'       H1_r        0.061500    28; {boccalini 2024}
+    C2'       CT_r        0.167000    29; {boccalini 2024}
+    H2'1      H1_r        0.097200    30; {boccalini 2024}
+    O2'       OH_r       -0.683900    31; {boccalini 2024}
+    HO'2      HO_r        0.388600    32; {boccalini 2024}
+    O3'       OS_OR_r    -0.524600    33; {boccalini 2024}
+  [ bonds ]
+    P         O1P     
+    P         O2P     
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N9      
+    N9        C8      
+    C8        H8      
+    C8        N7      
+    N7        C5      
+    C5        C6      
+    C6        N6      
+    N6        H61     
+    N6        H62     
+    C6        N1      
+    N1        C2      
+    C2        H2      
+    C2        N3      
+    N3        C4      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    P         -O3'    
+    C1'       C2'     
+    C5        C4      
+    N9        C4      
+  [ impropers ]
+    C4        C8       N9       C1'     
+    C6        H61      N6       H62     
+    N9        N7       C8       H8      
+    N1        N3       C2       H2      
+    C5        N6       C6       N1      
+
+[ RAMP5 ]
+  [ atoms ]
+    OP3       OH_OP_r    -0.459700     1; {boccalini 2024}
+    HOP3      HO_r        0.450000     2; {boccalini 2024}
+    P         P_r         0.764600     3; {boccalini 2024}
+    OP1       OP_r       -0.609700     4; {boccalini 2024}
+    OP2       OP_r       -0.609700     5; {boccalini 2024}
+    O5'       OS_OR_r    -0.628300     6; {boccalini 2024}
+    C5'       CI_r        0.055800     7; {boccalini 2024}
+    H5'1      H1_r        0.067900     8; {boccalini 2024}
+    H5'2      H1_r        0.067900     9; {boccalini 2024}
+    C4'       CJ_r        0.106500    10; {boccalini 2024}
+    H4'       H1_r        0.117400    11; {boccalini 2024}
+    O4'       OS_r       -0.354800    12; {boccalini 2024}
+    C1'       CT_r        0.039400    13; {boccalini 2024}
+    H1'       H2_r        0.200700    14; {boccalini 2024}
+    N9        N&_NA_r    -0.025100    15; {boccalini 2024}
+    C8        CKA_r       0.200600    16; {boccalini 2024}
+    H8        H5_r        0.155300    17; {boccalini 2024}
+    N7        NB_r       -0.607300    18; {boccalini 2024}
+    C5        CB_r        0.051500    19; {boccalini 2024}
+    C6        CA_CA_r     0.700900    20; {boccalini 2024}
+    N6        N2_r       -1.008800    21; {boccalini 2024}
+    H61       H_r         0.473800    22; {boccalini 2024}
+    H62       H_r         0.473800    23; {boccalini 2024}
+    N1        NC_NA_r    -0.796900    24; {boccalini 2024}
+    C2        CQ_r        0.587500    25; {boccalini 2024}
+    H2        H5_r        0.065000    26; {boccalini 2024}
+    N3        NC_NA_r    -0.699700    27; {boccalini 2024}
+    C4        CB_r        0.305300    28; {boccalini 2024}
+    C3'       CT_r        0.202200    29; {boccalini 2024}
+    H3'       H1_r        0.061500    30; {boccalini 2024}
+    C2'       CT_r        0.067000    31; {boccalini 2024}
+    H2'1      H1_r        0.097200    32; {boccalini 2024}
+    O2'       OH_r       -0.613900    33; {boccalini 2024}
+    HO'2      HO_r        0.418600    34; {boccalini 2024}
+    O3'       OS_OR_r    -0.524600    35; {boccalini 2024}
+  [ bonds ]
+    P         OP1     
+    P         OP2     
+    OP3       P       
+    OP3       HOP3    
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N9      
+    N9        C8      
+    C8        H8      
+    C8        N7      
+    N7        C5      
+    C5        C6      
+    C6        N6      
+    N6        H61     
+    N6        H62     
+    C6        N1      
+    N1        C2      
+    C2        H2      
+    C2        N3      
+    N3        C4      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    C1'       C2'     
+    C5        C4      
+    N9        C4      
+  [ impropers ]
+    C4        C8       N9       C1'     
+    C6        H61      N6       H62     
+    N9        N7       C8       H8      
+    N1        N3       C2       H2      
+    C5        N6       C6       N1      
+
+[ RA3 ]
+  [ atoms ]
+    P         P_r         1.266200     1; {boccalini 2024}
+    O1P       OP_r       -0.776000     2; {boccalini 2024}
+    O2P       OP_r       -0.776000     3; {boccalini 2024}
+    O5'       OS_OR_r    -0.498900     4; {boccalini 2024}
+    C5'       CI_r        0.055800     5; {boccalini 2024}
+    H5'1      H1_r        0.067900     6; {boccalini 2024}
+    H5'2      H1_r        0.067900     7; {boccalini 2024}
+    C4'       CJ_r        0.106500     8; {boccalini 2024}
+    H4'       H1_r        0.117400     9; {boccalini 2024}
+    O4'       OS_r       -0.354800    10; {boccalini 2024}
+    C1'       CT_r        0.039400    11; {boccalini 2024}
+    H1'       H2_r        0.200700    12; {boccalini 2024}
+    N9        N&_NA_r    -0.025100    13; {boccalini 2024}
+    C8        CKA_r       0.200600    14; {boccalini 2024}
+    H8        H5_r        0.155300    15; {boccalini 2024}
+    N7        NB_r       -0.607300    16; {boccalini 2024}
+    C5        CB_r        0.051500    17; {boccalini 2024}
+    C6        CA_CA_r     0.700900    18; {boccalini 2024}
+    N6        N2_r       -1.008800    19; {boccalini 2024}
+    H61       H_r         0.473800    20; {boccalini 2024}
+    H62       H_r         0.473800    21; {boccalini 2024}
+    N1        NC_NA_r    -0.796900    22; {boccalini 2024}
+    C2        CQ_r        0.587500    23; {boccalini 2024}
+    H2        H5_r        0.065000    24; {boccalini 2024}
+    N3        NC_NA_r    -0.699700    25; {boccalini 2024}
+    C4        CB_r        0.305300    26; {boccalini 2024}
+    C3'       CT_r        0.202200    27; {boccalini 2024}
+    H3'       H1_r        0.061500    28; {boccalini 2024}
+    C2'       CT_r        0.167000    29; {boccalini 2024}
+    H2'1      H1_r        0.097200    30; {boccalini 2024}
+    O2'       OH_r       -0.683900    31; {boccalini 2024}
+    HO'2      HO_r        0.388600    32; {boccalini 2024}
+    O3'       OH_r       -0.654100    33; {boccalini 2024}
+    H3T       HO_r        0.437600    34; {boccalini 2024}
+  [ bonds ]
+    P         O1P     
+    P         O2P     
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N9      
+    N9        C8      
+    C8        H8      
+    C8        N7      
+    N7        C5      
+    C5        C6      
+    C6        N6      
+    N6        H61     
+    N6        H62     
+    C6        N1      
+    N1        C2      
+    C2        H2      
+    C2        N3      
+    N3        C4      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    O3'       H3T     
+    P         -O3'    
+    C1'       C2'     
+    C5        C4      
+    N9        C4      
+  [ impropers ]
+    C4        C8       N9       C1'     
+    C6        H61      N6       H62     
+    N9        N7       C8       H8      
+    N1        N3       C2       H2      
+    C5        N6       C6       N1      
+
+[ RG ]
+  [ atoms ]
+    P         P_r         1.266200     1; {boccalini 2024}
+    O1P       OP_r       -0.776000     2; {boccalini 2024}
+    O2P       OP_r       -0.776000     3; {boccalini 2024}
+    O5'       OS_OR_r    -0.498900     4; {boccalini 2024}
+    C5'       CI_r        0.055800     5; {boccalini 2024}
+    H5'1      H1_r        0.067900     6; {boccalini 2024}
+    H5'2      H1_r        0.067900     7; {boccalini 2024}
+    C4'       CJ_r        0.106500     8; {boccalini 2024}
+    H4'       H1_r        0.117400     9; {boccalini 2024}
+    O4'       OS_r       -0.354800    10; {boccalini 2024}
+    C1'       CT_r        0.019100    11; {boccalini 2024}
+    H1'       H2_r        0.200600    12; {boccalini 2024}
+    N9        N&_NA_r     0.049200    13; {boccalini 2024}
+    C8        CKG_r       0.137400    14; {boccalini 2024}
+    H8        H5_r        0.164000    15; {boccalini 2024}
+    N7        NB_r       -0.570900    16; {boccalini 2024}
+    C5        CB_CN_r     0.174400    17; {boccalini 2024}
+    C6        C_r         0.477000    18; {boccalini 2024}
+    O6        O_r        -0.559700    19; {boccalini 2024}
+    N1        NA_r       -0.560600    20; {boccalini 2024}
+    H1        H_r         0.424300    21; {boccalini 2024}
+    C2        CA_r        0.765700    22; {boccalini 2024}
+    N2        N2_r       -1.015800    23; {boccalini 2024}
+    H21       H_r         0.460700    24; {boccalini 2024}
+    H22       H_r         0.460700    25; {boccalini 2024}
+    N3        NC_r       -0.632300    26; {boccalini 2024}
+    C4        CB_CN_r     0.122200    27; {boccalini 2024}
+    C3'       CT_r        0.202200    28; {boccalini 2024}
+    H3'       H1_r        0.061500    29; {boccalini 2024}
+    C2'       CT_r        0.167000    30; {boccalini 2024}
+    H2'1      H1_r        0.097200    31; {boccalini 2024}
+    O2'       OH_r       -0.683900    32; {boccalini 2024}
+    HO'2      HO_r        0.388600    33; {boccalini 2024}
+    O3'       OS_OR_r    -0.524600    34; {boccalini 2024}
+  [ bonds ]
+    P         O1P     
+    P         O2P     
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N9      
+    N9        C8      
+    C8        H8      
+    C8        N7      
+    N7        C5      
+    C5        C6      
+    C6        O6      
+    C6        N1      
+    N1        H1      
+    N1        C2      
+    C2        N2      
+    N2        H21     
+    N2        H22     
+    C2        N3      
+    N3        C4      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    P         -O3'    
+    C1'       C2'     
+    C5        C4      
+    N9        C4      
+  [ impropers ]
+    C4        C8       N9       C1'     
+    C5        N1       C6       O6      
+    C6        C2       N1       H1      
+    C2        H21      N2       H22     
+    N9        N7       C8       H8      
+    N2        N1       C2       N3      
+
+[ RAMP ]
+  [ atoms ]
+    OP3       OP_r       -0.709700     1; {boccalini 2024}
+    P         P_r         0.764600     2; {boccalini 2024}
+    OP1       OP_r       -0.709700     3; {boccalini 2024}
+    OP2       OP_r       -0.709700     4; {boccalini 2024}
+    O5'       OS_OR_r    -0.628300     5; {boccalini 2024}
+    C5'       CI_r        0.055800     6; {boccalini 2024}
+    H5'1      H1_r        0.067900     7; {boccalini 2024}
+    H5'2      H1_r        0.067900     8; {boccalini 2024}
+    C4'       CJ_r        0.106500     9; {boccalini 2024}
+    H4'       H1_r        0.117400    10; {boccalini 2024}
+    O4'       OS_r       -0.354800    11; {boccalini 2024}
+    C1'       CT_r        0.039400    12; {boccalini 2024}
+    H1'       H2_r        0.200700    13; {boccalini 2024}
+    N9        N&_NA_r    -0.025100    14; {boccalini 2024}
+    C8        CKA_r       0.200600    15; {boccalini 2024}
+    H8        H5_r        0.155300    16; {boccalini 2024}
+    N7        NB_r       -0.607300    17; {boccalini 2024}
+    C5        CB_r        0.051500    18; {boccalini 2024}
+    C6        CA_CA_r     0.700900    19; {boccalini 2024}
+    N6        N2_r       -1.008800    20; {boccalini 2024}
+    H61       H_r         0.473800    21; {boccalini 2024}
+    H62       H_r         0.473800    22; {boccalini 2024}
+    N1        NC_NA_r    -0.796900    23; {boccalini 2024}
+    C2        CQ_r        0.587500    24; {boccalini 2024}
+    H2        H5_r        0.065000    25; {boccalini 2024}
+    N3        NC_NA_r    -0.699700    26; {boccalini 2024}
+    C4        CB_r        0.305300    27; {boccalini 2024}
+    C3'       CT_r        0.202200    28; {boccalini 2024}
+    H3'       H1_r        0.061500    29; {boccalini 2024}
+    C2'       CT_r        0.067000    30; {boccalini 2024}
+    H2'1      H1_r        0.097200    31; {boccalini 2024}
+    O2'       OH_r       -0.613900    32; {boccalini 2024}
+    HO'2      HO_r        0.418600    33; {boccalini 2024}
+    O3'       OH_r       -0.635100    34; {boccalini 2024}
+    H3T       HO_r        0.418600    35; {boccalini 2024}
+  [ bonds ]
+    P         OP1     
+    P         OP2     
+    OP3       P       
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N9      
+    N9        C8      
+    C8        H8      
+    C8        N7      
+    N7        C5      
+    C5        C6      
+    C6        N6      
+    N6        H61     
+    N6        H62     
+    C6        N1      
+    N1        C2      
+    C2        H2      
+    C2        N3      
+    N3        C4      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    O3'       H3T     
+    C1'       C2'     
+    C5        C4      
+    N9        C4      
+  [ impropers ]
+    C4        C8       N9       C1'     
+    C6        H61      N6       H62     
+    N9        N7       C8       H8      
+    N1        N3       C2       H2      
+    C5        N6       C6       N1      
+
+[ RGMP5 ]
+  [ atoms ]
+    OP3       OH_OP_r    -0.459700     1; {boccalini 2024}
+    HOP3      HO_r        0.450000     2; {boccalini 2024}
+    P         P_r         0.764600     3; {boccalini 2024}
+    OP1       OP_r       -0.609700     4; {boccalini 2024}
+    OP2       OP_r       -0.609700     5; {boccalini 2024}
+    O5'       OS_OR_r    -0.628300     6; {boccalini 2024}
+    C5'       CI_r        0.055800     7; {boccalini 2024}
+    H5'1      H1_r        0.067900     8; {boccalini 2024}
+    H5'2      H1_r        0.067900     9; {boccalini 2024}
+    C4'       CJ_r        0.106500    10; {boccalini 2024}
+    H4'       H1_r        0.117400    11; {boccalini 2024}
+    O4'       OS_r       -0.354800    12; {boccalini 2024}
+    C1'       CT_r        0.019100    13; {boccalini 2024}
+    H1'       H2_r        0.200600    14; {boccalini 2024}
+    N9        N&_NA_r     0.049200    15; {boccalini 2024}
+    C8        CKG_r       0.137400    16; {boccalini 2024}
+    H8        H5_r        0.164000    17; {boccalini 2024}
+    N7        NB_r       -0.570900    18; {boccalini 2024}
+    C5        CB_CN_r     0.174400    19; {boccalini 2024}
+    C6        C_r         0.477000    20; {boccalini 2024}
+    O6        O_r        -0.559700    21; {boccalini 2024}
+    N1        NA_r       -0.560600    22; {boccalini 2024}
+    H1        H_r         0.424300    23; {boccalini 2024}
+    C2        CA_r        0.765700    24; {boccalini 2024}
+    N2        N2_r       -1.015800    25; {boccalini 2024}
+    H21       H_r         0.460700    26; {boccalini 2024}
+    H22       H_r         0.460700    27; {boccalini 2024}
+    N3        NC_r       -0.632300    28; {boccalini 2024}
+    C4        CB_CN_r     0.122200    29; {boccalini 2024}
+    C3'       CT_r        0.202200    30; {boccalini 2024}
+    H3'       H1_r        0.061500    31; {boccalini 2024}
+    C2'       CT_r        0.067000    32; {boccalini 2024}
+    H2'1      H1_r        0.097200    33; {boccalini 2024}
+    O2'       OH_r       -0.613900    34; {boccalini 2024}
+    HO'2      HO_r        0.418600    35; {boccalini 2024}
+    O3'       OS_OR_r    -0.524600    36; {boccalini 2024}
+  [ bonds ]
+    P         OP1     
+    P         OP2     
+    OP3       P       
+    OP3       HOP3    
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N9      
+    N9        C8      
+    C8        H8      
+    C8        N7      
+    N7        C5      
+    C5        C6      
+    C6        O6      
+    C6        N1      
+    N1        H1      
+    N1        C2      
+    C2        N2      
+    N2        H21     
+    N2        H22     
+    C2        N3      
+    N3        C4      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    C1'       C2'     
+    C5        C4      
+    N9        C4      
+  [ impropers ]
+    C4        C8       N9       C1'     
+    C5        N1       C6       O6      
+    C6        C2       N1       H1      
+    C2        H21      N2       H22     
+    N9        N7       C8       H8      
+    N2        N1       C2       N3      
+
+[ RG3 ]
+  [ atoms ]
+    P         P_r         1.266200     1; {boccalini 2024}
+    O1P       OP_r       -0.776000     2; {boccalini 2024}
+    O2P       OP_r       -0.776000     3; {boccalini 2024}
+    O5'       OS_OR_r    -0.498900     4; {boccalini 2024}
+    C5'       CI_r        0.055800     5; {boccalini 2024}
+    H5'1      H1_r        0.067900     6; {boccalini 2024}
+    H5'2      H1_r        0.067900     7; {boccalini 2024}
+    C4'       CJ_r        0.106500     8; {boccalini 2024}
+    H4'       H1_r        0.117400     9; {boccalini 2024}
+    O4'       OS_r       -0.354800    10; {boccalini 2024}
+    C1'       CT_r        0.019100    11; {boccalini 2024}
+    H1'       H2_r        0.200600    12; {boccalini 2024}
+    N9        N&_NA_r     0.049200    13; {boccalini 2024}
+    C8        CKG_r       0.137400    14; {boccalini 2024}
+    H8        H5_r        0.164000    15; {boccalini 2024}
+    N7        NB_r       -0.570900    16; {boccalini 2024}
+    C5        CB_CN_r     0.174400    17; {boccalini 2024}
+    C6        C_r         0.477000    18; {boccalini 2024}
+    O6        O_r        -0.559700    19; {boccalini 2024}
+    N1        NA_r       -0.560600    20; {boccalini 2024}
+    H1        H_r         0.424300    21; {boccalini 2024}
+    C2        CA_r        0.765700    22; {boccalini 2024}
+    N2        N2_r       -1.015800    23; {boccalini 2024}
+    H21       H_r         0.460700    24; {boccalini 2024}
+    H22       H_r         0.460700    25; {boccalini 2024}
+    N3        NC_r       -0.632300    26; {boccalini 2024}
+    C4        CB_CN_r     0.122200    27; {boccalini 2024}
+    C3'       CT_r        0.202200    28; {boccalini 2024}
+    H3'       H1_r        0.061500    29; {boccalini 2024}
+    C2'       CT_r        0.167000    30; {boccalini 2024}
+    H2'1      H1_r        0.097200    31; {boccalini 2024}
+    O2'       OH_r       -0.683900    32; {boccalini 2024}
+    HO'2      HO_r        0.388600    33; {boccalini 2024}
+    O3'       OH_r       -0.654100    34; {boccalini 2024}
+    H3T       HO_r        0.437600    35; {boccalini 2024}
+  [ bonds ]
+    P         O1P     
+    P         O2P     
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N9      
+    N9        C8      
+    C8        H8      
+    C8        N7      
+    N7        C5      
+    C5        C6      
+    C6        O6      
+    C6        N1      
+    N1        H1      
+    N1        C2      
+    C2        N2      
+    N2        H21     
+    N2        H22     
+    C2        N3      
+    N3        C4      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    O3'       H3T     
+    P         -O3'    
+    C1'       C2'     
+    C5        C4      
+    N9        C4      
+  [ impropers ]
+    C4        C8       N9       C1'     
+    C5        N1       C6       O6      
+    C6        C2       N1       H1      
+    C2        H21      N2       H22     
+    N9        N7       C8       H8      
+    N2        N1       C2       N3      
+
+[ RGMP ]
+  [ atoms ]
+    OP3       OP_r       -0.709700     1; {boccalini 2024}
+    P         P_r         0.764600     2; {boccalini 2024}
+    OP1       OP_r       -0.709700     3; {boccalini 2024}
+    OP2       OP_r       -0.709700     4; {boccalini 2024}
+    O5'       OS_OR_r    -0.628300     5; {boccalini 2024}
+    C5'       CI_r        0.055800     6; {boccalini 2024}
+    H5'1      H1_r        0.067900     7; {boccalini 2024}
+    H5'2      H1_r        0.067900     8; {boccalini 2024}
+    C4'       CJ_r        0.106500     9; {boccalini 2024}
+    H4'       H1_r        0.117400    10; {boccalini 2024}
+    O4'       OS_r       -0.354800    11; {boccalini 2024}
+    C1'       CT_r        0.019100    12; {boccalini 2024}
+    H1'       H2_r        0.200600    13; {boccalini 2024}
+    N9        N&_NA_r     0.049200    14; {boccalini 2024}
+    C8        CKG_r       0.137400    15; {boccalini 2024}
+    H8        H5_r        0.164000    16; {boccalini 2024}
+    N7        NB_r       -0.570900    17; {boccalini 2024}
+    C5        CB_CN_r     0.174400    18; {boccalini 2024}
+    C6        C_r         0.477000    19; {boccalini 2024}
+    O6        O_r        -0.559700    20; {boccalini 2024}
+    N1        NA_r       -0.560600    21; {boccalini 2024}
+    H1        H_r         0.424300    22; {boccalini 2024}
+    C2        CA_r        0.765700    23; {boccalini 2024}
+    N2        N2_r       -1.015800    24; {boccalini 2024}
+    H21       H_r         0.460700    25; {boccalini 2024}
+    H22       H_r         0.460700    26; {boccalini 2024}
+    N3        NC_r       -0.632300    27; {boccalini 2024}
+    C4        CB_CN_r     0.122200    28; {boccalini 2024}
+    C3'       CT_r        0.202200    29; {boccalini 2024}
+    H3'       H1_r        0.061500    30; {boccalini 2024}
+    C2'       CT_r        0.067000    31; {boccalini 2024}
+    H2'1      H1_r        0.097200    32; {boccalini 2024}
+    O2'       OH_r       -0.613900    33; {boccalini 2024}
+    HO'2      HO_r        0.418600    34; {boccalini 2024}
+    O3'       OH_r       -0.635100    35; {boccalini 2024}
+    H3T       HO_r        0.418600    36; {boccalini 2024}
+  [ bonds ]
+    P         OP1     
+    P         OP2     
+    OP3       P       
+    P         O5'     
+    O5'       C5'     
+    C5'       H5'1    
+    C5'       H5'2    
+    C5'       C4'     
+    C4'       H4'     
+    C4'       O4'     
+    O4'       C1'     
+    C1'       H1'     
+    C1'       N9      
+    N9        C8      
+    C8        H8      
+    C8        N7      
+    N7        C5      
+    C5        C6      
+    C6        O6      
+    C6        N1      
+    N1        H1      
+    N1        C2      
+    C2        N2      
+    N2        H21     
+    N2        H22     
+    C2        N3      
+    N3        C4      
+    C4'       C3'     
+    C3'       H3'     
+    C3'       C2'     
+    C2'       H2'1    
+    C2'       O2'     
+    O2'       HO'2    
+    C3'       O3'     
+    O3'       H3T     
+    C1'       C2'     
+    C5        C4      
+    N9        C4      
+  [ impropers ]
+    C4        C8       N9       C1'     
+    C5        N1       C6       O6      
+    C6        C2       N1       H1      
+    C2        H21      N2       H22     
+    N9        N7       C8       H8      
+    N2        N1       C2       N3      
+

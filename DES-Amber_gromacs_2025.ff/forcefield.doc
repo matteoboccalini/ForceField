@@ -1,0 +1,14 @@
+﻿DES-AMBER Protein+RNA+DNA (Boccalini Jan. 2025)
+
+************************************************************************
+* Cite:                                                                *
+* - Development of Force Field Parameters for the Simulation of Single *
+* and Double-Stranded DNA Molecules and DNA−Protein Complexes          *
+* JPCB 2022 - Tucker et al.                                            *
+* - Development of a Force Field for the Simulation of Single-Chain    *
+* Proteins and Protein–Protein Complexes                               *
+* JCTC 2020 - Piana et al.                                             *
+*                                                                      *
+* Porting to Gromacs format by Matteo Boccalini and Matteo Paloni      *
+* Centre de Biologie Structurale, Montpellier, France, 2025            *
+************************************************************************
